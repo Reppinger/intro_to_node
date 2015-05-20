@@ -22,7 +22,7 @@ function read_filename() {
 		input: process.stdin,
 		output: process.stdout
 	});
-	rl.question("What file do you want to read? ", function(input) {
+	rl.question("What file do you want to print out? ", function(input) {
 		print_file_contents(input);
 		rl.close();
     });
@@ -33,7 +33,6 @@ var file_parameter = get_file_parameter();
 if(file_parameter) {
 	print_file_contents(file_parameter);
 } else {
-	console.log('You must supply a filename.');
   	read_filename();
 }
 
